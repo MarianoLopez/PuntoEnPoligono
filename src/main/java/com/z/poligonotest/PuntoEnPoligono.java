@@ -10,6 +10,8 @@ import com.z.poligonotest.DAO.FolderDAO;
 import com.z.poligonotest.Modelos.Coordinate;
 import com.z.poligonotest.Modelos.Establecimiento;
 import com.z.poligonotest.Modelos.Folder;
+import com.z.poligonotest.Util.JsonSerialization;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -34,6 +36,7 @@ public class PuntoEnPoligono {
             }
         }
         System.out.println("Cantidad barrios asignados: "+asignados);
+        JsonSerialization.prettyPrint(new File("D:\\establecimientos.json"), establecimientos);
         //prueba manual
         /*Coordinate toFind = new Coordinate(new Float(-27.5009338), new Float(-58.8386009));
         System.out.println("Coor in barrio: "+barrios.getBarrioFromCoordinate(toFind));*/
